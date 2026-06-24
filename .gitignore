@@ -1,24 +1,37 @@
-# Compiled class file
-*.class
+public class Product {
+    private int id;
+    private String name;
+    private double price;
+    private int quantity;
 
-# Log file
-*.log
+    public Product(int id, String name, double price, int quantity) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
 
-# BlueJ files
-*.ctxt
+    public int getId() {
+        return id;
+    }
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+    public String getName() {
+        return name;
+    }
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+    public double getPrice() {
+        return price;
+    }
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+    public int getQuantity() {
+        return quantity;
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + id +
+                ", Name: " + name +
+                ", Price: " + price +
+                ", Quantity: " + quantity;
+    }
+}
